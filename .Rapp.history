@@ -1,0 +1,250 @@
+ls()
+rm("allvars")
+dir()
+allvars <- read.csv(file="honduras-capflows-homicides.csv")
+getwd()
+rm("allvars"0)
+rm("allvars")
+allvars <- read.csv(file="honduras-capflows-homicides.csv",header=FALSE)
+allvars
+allvars
+t(allvars)
+allvars[,1] = as.factor(allvars[,1])
+allvars
+allvars = t(allvars)
+allvars
+allvars[,1] = as.factor(allvars[,1])
+allvars
+rm("allvars")
+allvars <- read.csv("honduras-capflows-homicides.csv",header=FALSE)
+allvars
+allvars[Year]
+allvars[1]
+allvars[1] = as.date(allvars[1])
+allvars
+allvars[1] = as.Date(allvars[1])
+allvars
+thetable = t(allvars)
+thetable
+thetable["Year"]
+thetable$Year
+thetable$"Year"
+rm(thetable$V1)
+thetable
+rm thetable[1]
+rm(thetable[1])
+rm(thetable[V1])
+table2 = t(allvars,header=TRUE)
+table2
+table2 <- read.csv("honduras-capflows-homicides.csv", header=TRUE)
+table2
+t(table2)
+table2
+thetable
+as.matrix(allvars)
+allvars
+allvars.mat <- as.matrix(allvars)
+allvars.mat
+allvars.t <- t(allvars.mat)
+allvars.t
+cols <- c('year', 'outflows', 'homicides', 'econ_aid', 'mil_aid')
+cols
+outflows <- as.numeric(allvars.t[,2])
+outflows
+outflows[0]
+allvars.t[-1]
+t(allvars.t)
+allvars.t
+allvars.t[-1]
+allvars.t[-V1]
+allvars
+allvars$V1 = NULL
+allvars
+allvars.mat
+years
+years <- as.Date(allvars[1])
+outflows <- as.numeric(allvars[2])
+allvars[2]
+allvars[v2]
+allvars$1
+allvars$2
+allvar[V2]
+allvars[V2]
+allvars
+allvars[1]
+allvars$1
+names(allvars)
+t(allvars)
+vertical = as.matrix(t(allvars))
+vertical
+col_names
+ls()
+colnames(vertical) <- cols
+cols
+colnames(vertical) <- c(cols[1], cols[2], cols[3])
+vertical
+names(vertical)
+summary(vertical)
+ls()
+rm("allvars", "allvars.mat")
+ls()
+rm("allvars.t", "table2", "thetable")
+outflows
+rm("outflows")
+ls()
+vertical
+usaid
+names(usaid)
+usaid$fiscal_year
+aidbyyear <- tapply(usaid$fiscal_year,usaid$current_amount,sum)
+aidbyyear
+aidbyyear <- tapply(usaid$current_amount,usaid$fiscal_year,sum)
+aidbyyear
+aidbyyear[1]
+aidbyyear[1,]
+aidbyyear[2]
+aidbyyear$2
+aidbyyear[0]
+typeof(aidbyyear)
+ls()
+vertical2 <- cbind(vertical, aidbyyear)
+vertical2
+aidbyyear <- tapply(usaid$current_amount,usaid$fiscal_year & usaid$assistance_category_name,sum)
+aidbyyear
+econaid <- tapply()
+econaid <- tapply(usaid$current_amount,if (usaid$assistance_category_name=="Economic") { usaid$fiscal_year },sum)
+econaid
+econaid <- tapply(usaid$current_amount,if (usaid$assistance_category_name=="Military") { usaid$fiscal_year },sum)
+econaid
+for (type in usaid$assistance_category_name) {}
+for (type in usaid$assistance_category_name) {
+}
+for (i in usaid) {}
+for (i in usaid) {
+if (usaid$assistance_category_name=="Military") {}
+if (usaid$assistance_category_name=="Military") {
+econaid[usaid$fiscal_year[i]] = usaid$current_value[i]
+}
+}
+econaid
+levels(econaid)
+levels(usaid)
+years
+vertical
+ls()
+vertical[year]
+vertical$year
+vertical2$year
+vertical2[,1]
+milaid
+mail = sapply(usaid$assistance_category_name, function(x){sum(usaid$current_amount)})
+mail
+mail2 = sapply(usaid$assistance_category_name, function(x){sum(usaid$current_amount), USE.NAMES=FALSE})
+mail2 = sapply(usaid$assistance_category_name, function(x){sum(usaid$current_amount)}, USE.NAMES=F)
+mail2
+mail2 = sapply(usaid$fiscal_year, function(x){sum(usaid$current_amount)}, USE.NAMES=F)
+mail2
+mail3 = sapply(usaid$fiscal_year, function(x){sum(usaid$current_amount[usaid$fiscal_year==x])}, USE.NAMES=F)
+mail3
+mail4 = sapply(usaid$fiscal_year, function(x){sum(usaid$current_amount[usaid$fiscal_year==x])})
+mail4
+usaid$fiscal_year
+as.numeric(usaid$fiscal_year)
+mail5 = sapply(as.numeric(usaid$fiscal_year), function(x){sum(usaid$current_amount[as.numeric(usaid$fiscal_year)==x])})
+mail5
+data.frame(year = usaid$year, mail5)
+data.frame(year = usaid$fiscal_year, mail5)
+data.frame(year = levels(usaid$fiscal_year), mail5)
+mail6 = sapply(levels(usaid$fiscal_year), function(x){sum(usaid$current_amount[usaid$fiscal_year==x])})
+mail6
+levels(usaid$fiscal_year)
+agg <- aggregate(usaid$current_amount, by=list(fiscal_year), FUN=sum)
+agg <- aggregate(usaid$current_amount, by=list(usaid$fiscal_year), FUN=sum)
+agg
+agg.byca <- aggregate(usaid$current_amount, by=list(usaid$fiscal_year, usaid$assistance_category_name), FUN=sum)
+agg.byca
+colnames(agg.byca, c('year', 'type', 'sum'))
+colnames(agg.byca) <- c('year', 'type', 'sum')
+agg.byca
+ls()
+vertical2
+cbind(vertical2, agg.byca[$type==Economic])
+cbind(vertical2, agg.byca[agg.byca$type==Economic])
+cbind(vertical2, agg.byca[agg.byca$type=='Economic'])
+cbind(vertical2, agg.byca$sum[agg.byca$type=='Economic'])
+cbind(vertical2, agg.byca$sum[agg.byca$type=='Military'])
+finaltable <- cbind(vertical2, agg.byca$sum[agg.byca$type=='Economic'], agg.byca$sum[agg.byca$type=='Military'])
+finaltable
+colnames(finaltable) <- c(year,outflows,homicides,totalaid,economic,military)
+colnames(finaltable) <- c('year','outflows','homicides','totalaid','economic','military')
+finaltable
+finaltable[finaltable$totalaid==0]
+finaltable[finaltable[totalaid]==0]
+finaltable[finaltable['totalaid']==0]
+finaltable[finaltable['totalaid']==0, rm.na=T]
+finaltable[finaltable['totalaid']==finaltable['economic'] + finaltable['military'], rm.na=T]
+finaltable[finaltable['totalaid']==finaltable['economic'] + finaltable['military']]
+finaltable['checktotal'] <- finaltable['economic'] + finaltable['military]
+finaltable
+final;
+''
+'
+finaltable['checktotal'] <- finaltable['economic'] + finaltable['military']
+finaltable
+finaltable <- cbind(vertical2, agg.byca$sum[agg.byca$type=='Economic'], agg.byca$sum[agg.byca$type=='Military'])
+colnames(finaltable) <- c('year','outflows','homicides','totalaid','economic','military')
+finaltable
+plot(finaltable['year'],finaltable['economic'])
+plot(finaltable['economic'])
+matplot(finaltable['year'], finaltable['outflows'])
+class(finaltable['year'])
+is.na(finaltable['year'])
+finaltable['year']
+finaltable
+finaltable[,1]
+matplot(finaltable[,1], finaltable[,2])
+matplot(finaltable[,1], finaltable[,2], type="o")
+matplot(finaltable[,1], finaltable[,2], type="o", xlab="year")
+matplot(finaltable[,1], finaltable[,2], type="o", xlab="year")
+lines(finaltable[,2], type="o", col="red")
+lines(finaltable[,1], finaltable[,2], type="o", col="red")
+lines(finaltable[,1], finaltable[,2], type="o", col="green")
+lines(finaltable[,1], finaltable[,3], type="o", col="red")
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,10000))
+lines(finaltable[,1], finaltable[,2])
+lines(finaltable[,1], finaltable[,2], col="green")
+matplot(finaltable[,1], finaltable[,3], type="b", xlab="year", col="red", ylim=c(0,10000))
+matplot(finaltable[,1], finaltable[,3], type="b", xlab="year", col="red", ylim=c(0,10000), pch=20)
+matplot(finaltable[,1], finaltable[,3], type="b", xlab="year", col="red", ylim=c(0,10000), pch=1)
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,10000), pch=20)
+lines(finaltable[,1], finaltable[,2], col="green", type="o", pch=20)
+lines(finaltable[,1], finaltable[,5]/1000, col="black", type="o", pch=20)
+lines(finaltable[,1], finaltable[,5]/10000, col="black", type="o", pch=20)
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,100000), pch=20)
+lines(finaltable[,1], finaltable[,5]/10000, col="black", type="o", pch=20)
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,20000), pch=20)
+lines(finaltable[,1], finaltable[,5]/10000, col="black", type="o", pch=20)
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,30000), pch=20)
+lines(finaltable[,1], finaltable[,5]/10000, col="black", type="o", pch=20)
+lines(finaltable[,1], finaltable[,2], col="green", type="o", pch=20)
+lines(finaltable[,1], finaltable[,6]/10000, col="blue", type="o", pch=20)
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,20000), pch=20)
+lines(finaltable[,1], finaltable[,2], col="green", type="o", pch=20)
+lines(finaltable[,1], finaltable[,6]/10000, col="blue", type="o", pch=20)
+matplot(finaltable[,1], finaltable[,3], type="o", xlab="year", col="red", ylim=c(0,20000), pch=20)
+lines(finaltable[,1], finaltable[,5]/10000, col="black", type="o", pch=20)
+lines(finaltable[,1], finaltable[,2], col="green", type="o", pch=20)
+lines(finaltable[,1], finaltable[,6]/10000, col="blue", type="o", pch=20)
+lines(finaltable[,1], finaltable[,5]/1000, col="black", type="o", pch=20)
+lines(finaltable[,1], finaltable[,5]/5000, col="black", type="o", pch=20)
+lines(finaltable[,1], finaltable[,6]/1000, col="blue", type="o", pch=20)
+corr(finaltable[,1], finaltable[,6])
+cor(finaltable[,1], finaltable[,6])
+cor(finaltable[,2], finaltable[,4])
+cor(finaltable[,2], finaltable[,5])
+cor(finaltable[,2], finaltable[,6])
+cor(finaltable[,3], finaltable[,6])
+cor(finaltable[,3], finaltable[,5])
+cor(finaltable[,3], finaltable[,4])
+matplot(finaltable[,1], finaltable[,6]/(finaltable[,5]+finaltable[,6]), type="o", xlab="year", col="red", ylim=c(0,20000), pch=20)
+matplot(finaltable[,1], finaltable[,6]/(finaltable[,5]+finaltable[,6]), type="o", xlab="year", col="red", ylim=c(0,1), pch=20)
